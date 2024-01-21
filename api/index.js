@@ -1,11 +1,3 @@
-// import { Express } from "express";
-
-// const app = express();
-
-// app.listen(3000, () => {
-//     console.log("Server is running or port 3000");
-// });
-
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
@@ -24,6 +16,8 @@ mongoose
 });
 
 const app = express();
+app.use(express.json());
+
 const port = 3000;
 
 app.get('/', (req, res) => {
@@ -35,4 +29,4 @@ app.listen(port, () => {
 })
 
 app.use("/api/user", userRouter);
-app.use("api/auth", authRouter);
+app.use("/api/auth", authRouter);

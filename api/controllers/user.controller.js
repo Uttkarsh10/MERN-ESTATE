@@ -1,5 +1,5 @@
 export const test = (req,res) => {
     res.json({
-        message:"Hello World New Method",
+        message:"Hello World User Method",
     });
 };
